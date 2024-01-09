@@ -1,6 +1,6 @@
 <?php
 
-function getImages($dir,array $explode = array('.','..')){
+function getImages($dir,array $explode = array('.','..','favicon.png')){
 	$files = [] ;
 	if(is_dir($dir) && $open_dir = opendir($dir)){
 		while ($read_dir = readdir($open_dir)) {

@@ -40,6 +40,7 @@ if(isset($_POST['submit'])){
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
 	<title>PHP image gallery</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
 	<style>
 		*{
 			margin: 0;
