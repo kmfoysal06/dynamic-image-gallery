@@ -36,12 +36,16 @@ if(isset($_POST['submit'])){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
 	<title>PHP image gallery</title>
 	<style>
 		*{
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
 		}
 		.container{
 			display: grid;
@@ -71,6 +75,20 @@ if(isset($_POST['submit'])){
 		.input input[type=submit]{
 			background: #0f0;
 			border-radius: 10px;
+			font-weight: bolder;
+		}
+		.single-image{
+			position: relative;
+		}
+		.single-image img, .single-image p{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			overflow: hidden;
+		}
+		.single-image p{
+			font-size: 1.2em;
 		}
 	</style>
 </head>
@@ -89,7 +107,10 @@ if(isset($_POST['submit'])){
 	<div class="container">
 		<?php
 		foreach($get_images as $image){
-			echo '<img src="'.$image.'" alt="" width="200px">';
+			echo '<div class="single-image">
+				<img src="'.$image.'" alt="" width="200px">
+				<p>KMF PHP</p>
+			</div>';
 		}
 		?>
 	</div>
